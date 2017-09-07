@@ -1,6 +1,6 @@
 # get_swift
 
-##How did you implement your solution?
+## How did you implement your solution?
 
 I built out my solution as a full stack app.  While the assignment didn't strictly call for it, it's mostly templated anyway, plus I figured it would be useful to display the results with a simple front end view.
 
@@ -10,13 +10,13 @@ Once the framework was all set up, I first pulled in a function that would calcu
 
 Once these were sorted, I paired the 2 arrays up until either there were no more packages or no more drones left, whichever came first.  Essentially, the first drone that comes back to the depot picks up the most urgent package, and so on down the line.  The drone/package pairs were then stored as objects in an array, along with an array of any unclaimed packages.  These were then rendered in a view, using mustache.
 
-##Why did you implement it this way?
+## Why did you implement it this way?
 
 I implemented the framework this way because I am comfortable with an MVC framework using Node.js/Express.
 
 As for the actual output, this seemed to be the best start towards automating a system that would optimize delivery time.  While the package delivery is based on deadline, rather than distance, I assume someone would rather get a delivery late, rather than not at all.  If building out a full system (which is what you guys do), there would need to be lots of other logic checks and algorithm adjustments to fully optimize it.  For instance, it might make sense for one delivery to be very late, while still fulfilling the rest on time, rather than letting all the deliveries be just a little late.  It all depends on what is prioritized.
 
-##Let's assume we need to handle dispatching thousands of jobs per second to thousands of drivers. Would the solution you've implemented still work? Why or why not? What would you modify? Feel free to describe a completely different solution than the one you've developed.
+## Let's assume we need to handle dispatching thousands of jobs per second to thousands of drivers. Would the solution you've implemented still work? Why or why not? What would you modify? Feel free to describe a completely different solution than the one you've developed.
 
 My solution should work as a starting point.  You'd need to add in a lot more variables and constraints to deploy in the real world.  For instance, if you're not using a drone, you have to take into account roads, traffic, weather, etc.  Even if you are using a drone, there's a non-zero amount of time spent actually dropping off the package, plus battery charging and other factors.  In addition, you'd have to build priorities into the code, as mentioned above.  There is a degree of human preference that will optimize the algorithm.
 

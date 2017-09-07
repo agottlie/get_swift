@@ -31,7 +31,9 @@ function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
 function deg2rad(deg) {
     return deg * (Math.PI / 180)
 }
+//end outsourced code
 
+//calculate total distance travelled by drone to get back to depot
 function totalDroneDistance(drone) {
     let distanceToDestination = 0,
         distanceToDepot = getDistanceFromLatLonInKm(drone.location.latitude, drone.location.longitude, depotLat, depotLong);
@@ -43,6 +45,7 @@ function totalDroneDistance(drone) {
     return totalDistance;
 }
 
+//sort function
 function sort(arr, type) {
     let sortedArray = [];
     for (let i = 0; i < arr.length; i++) {
@@ -67,7 +70,7 @@ function sort(arr, type) {
     return sortedArray;
 }
 
-
+//routing
 app.get('/', (req, res) => {
     let drones = [],
         packages = [];

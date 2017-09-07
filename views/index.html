@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../js/script.js"></script>
+</head>
+<body>
+	<h1>Assigned</h1>
+	{{#assignments}}
+	<div>
+		{droneId: {{droneId}}, packageId: {{packageId}}}
+	</div>
+	{{/assignments}}
+	<h1>Unassigned Package IDs</h1>
+	{{#unassignedPackageIds}}
+	<div>
+		{{.}}
+	</div>
+	{{/unassignedPackageIds}}
+	
+</body>
+</html>

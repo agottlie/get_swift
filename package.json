@@ -1,0 +1,18 @@
+{
+  "name": "get_swift",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "express": "^4.15.4",
+    "mustache-express": "^1.2.5",
+    "pg-promise": "^6.5.1",
+    "util": "^0.10.3"
+  }
+}
